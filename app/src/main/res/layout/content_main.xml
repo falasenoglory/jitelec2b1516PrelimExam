@@ -81,6 +81,5 @@
         android:layout_centerHorizontal="true"
         android:text="New ToggleButton"
         android:checked="false"
-        android:onClick="Change"
         />
 </RelativeLayout>
