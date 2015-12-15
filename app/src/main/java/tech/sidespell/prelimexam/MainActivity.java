@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             } else if (rdbDecrement.isChecked()) {
                 time--;
                 txtTime.setText(time + "");
-
+                handler.postDelayed(runnable, speed);
             }
 
         }
@@ -102,9 +102,10 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         {
             handler.postDelayed(runnable, speed);
         }
-
-
-
+        else
+        {
+            handler.removeCallbacks(runnable);
+        }
 
 
     }
